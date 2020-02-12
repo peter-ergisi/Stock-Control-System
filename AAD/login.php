@@ -2,11 +2,11 @@
 
 session_start();
 
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === 0){
-    header("location: cart.php");
-    exit;
-} else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === 1){
-    header("location: dashboard.php");
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    if($_SESSION["isStaff"] === 0){
+        header("location: cart.php");
+    } else if ($_SESSION["isStaff"] === 1)
+        header("location: dashboard.php");
     exit;
 }
 
@@ -37,17 +37,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         if($isStaff === 1) {
                             session_start();
 
-                            $_SESSION["loggedin"] = 1;
+                            $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
+                            $_SESSION["isStaff"] = 1;
 
                             header("location: dashboard.php");
 
                         } else if($isStaff === 0){
                             session_start();
-                            $_SESSION["loggedin"] = 0;
+                            $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
+                            $_SESSION["isStaff"] = 0;
                             header("location: cart.php");
                         }
                     }
