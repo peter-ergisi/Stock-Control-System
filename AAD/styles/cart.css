@@ -1,0 +1,52 @@
+#cartText
+{
+	margin-top: 150px;
+	text-align:center;
+}
+#cartSection
+{
+    width: 60%;
+    overflow-x: hidden;
+    overflow-x: auto;
+    height: 500px;
+    margin: 50px auto;
+    border: 2px solid #172f6d;
+    border-radius: 7px;
+}
+#cartTable
+{
+	width:100%;
+}
+#cartBody
+{
+	display:inline-flex;
+	width:100%;
+}
+#cartBody tr
+{
+	width:100%;
+}
+#cartBody th, td
+{
+    width: 220px;
+    text-align: center;
+}
+#deleteImg
+{
+	height: 50px;
+}
+#totalPriceText
+{
+    width: 55%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#totalPriceText h2
+{
+	float:right;
+}
+
+
+
+
