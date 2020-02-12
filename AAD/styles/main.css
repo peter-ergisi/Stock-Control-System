@@ -2,12 +2,12 @@
 @font-face
 {
 	font-family: walkwayBlack;
-    src: url("../styles/Walkway_Black.ttf");
+	src: url("../styles/Walkway_Black.ttf");
 }
 @font-face
 {
 	font-family: aero;
-    src: url("../styles/Aero.ttf");
+	src: url("../styles/Aero.ttf");
 }
 *
 {
@@ -65,37 +65,37 @@ header
 	position:fixed;
 	top:0;
 	left: 0;
-    right: 0;
-    width: 100%;
+	right: 0;
+	width: 100%;
 }
 .navbarPre
 {
 	padding: 6px 0 6px 0;
-    background-color: rgba(10, 18, 119, 0.1);
-    width: 100%;
-    opacity:0;
-    transition: opacity 1s ease-out;
-    border-bottom:#172f6d 2px solid;
+	background-color: rgba(10, 18, 119, 0.1);
+	width: 100%;
+	opacity:0;
+	transition: opacity 1s ease-out;
+	border-bottom:#172f6d 2px solid;
 }
 .navbarPostMain
 {
 	padding: 6px 0 6px 0;
-    background-color: rgba(10, 18, 119, 0.1);
-    width: 100%;
-    opacity:1;
-    transition: opacity 2s ease-out;
-    border-bottom:#172f6d 2px solid;
-    height:86px;
+	background-color: rgba(10, 18, 119, 0.1);
+	width: 100%;
+	opacity:1;
+	transition: opacity 2s ease-out;
+	border-bottom:#172f6d 2px solid;
+	height:86px;
 }
 .navbarPost
 {
 	padding: 6px 0 6px 0;
-    background-color: rgba(10, 18, 119, 0.1);
-    width: 100%;
-    opacity:1;
-    transition: opacity 2s ease-out;
-    border-bottom:#172f6d 2px solid;
-    height:86px;
+	background-color: rgba(10, 18, 119, 0.1);
+	width: 100%;
+	opacity:1;
+	transition: opacity 2s ease-out;
+	border-bottom:#172f6d 2px solid;
+	height:86px;
 }
 .logo
 {
@@ -141,7 +141,7 @@ header
 	display:block;
 	position:absolute;
 	top: 36px;
-    right: 70px;
+	right: 70px;
 	font-family:"walkwayBlack";
 	color:#0a1a44;
 	font-size:25px;
@@ -156,21 +156,21 @@ header
 	cursor:pointer;
 	display:block;
 	position: absolute;
-    top: 34px;
-    right: 20px;
-    width: 40px;
-    height: 30px;
+	top: 34px;
+	right: 20px;
+	width: 40px;
+	height: 30px;
 }
 #menuBtn div
 {
 	display: block;
-    position: absolute;
-    height: 6px;
-    width: 100%;
-    background: #000000;
-    border-radius: 10px;
-  	transition: .25s ease-in-out;
-  	left:0;
+	position: absolute;
+	height: 6px;
+	width: 100%;
+	background: #000000;
+	border-radius: 10px;
+	transition: .25s ease-in-out;
+	left:0;
 }
 #menuBtn div:nth-child(1)
 {
@@ -186,11 +186,11 @@ header
 }
 #menuBtn.openMenu div:nth-child(2)
 {
-  transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 #menuBtn.openMenu div:nth-child(3)
 {
-  transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 #menuBtn.openMenu div:nth-child(1),#menuBtn.openMenu div:nth-child(4)
 {
@@ -206,30 +206,30 @@ header
 	position:fixed;
 	top:96px;
 	left:0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    transition:0.75s;
-    overflow-y:hidden;
-    z-index: 1;
+	background-color: rgb(0,0,0);
+	background-color:  rgba(2, 2, 23, 0.9);
+	transition:0.75s;
+	overflow-y:hidden;
+	z-index: 1;
 }
 #mobileLinks
 {
 	position: relative;
-    top: 15%;
-    width: 100%;
-    text-align: center;
-    user-select: none;
+	top: 15%;
+	width: 100%;
+	text-align: center;
+	user-select: none;
 }
 #mobileLinks a {
 	font-family:"walkwayBlack";
-    padding: 15px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #0a1a44;
-    display: block;
-    transition: 0.3s;
-    text-transform:uppercase;
-    letter-spacing:5px;
+	padding: 15px;
+	text-decoration: none;
+	font-size: 36px;
+	color: #275ade;
+	display: block;
+	transition: 0.3s;
+	text-transform:uppercase;
+	letter-spacing:5px;
 }
 #mobileLinks a:hover
 {
@@ -246,26 +246,24 @@ header
 	height:400px;
 	background: orange;
 	margin-top:15px;
-    opacity:0;
-    transition: opacity 2s ease-out;
+	opacity:0;
+	transition: opacity 2s ease-out;
 }
 .contentPost
 {
 	text-align:center;
 	width:100%;
 	height:400px;
-	margin-top:15px;
-    opacity:1;
-    transition: opacity 2s ease-out;
+	margin-top:25px;
+	opacity:1;
+	transition: opacity 2s ease-out;
 }
 #content div
 {
 	width:95%;
 	background:#ffffff;
 	height:60px;
-    margin: 20px 15px;
-    border:1px solid #818181;
-    border-radius:12px;
+	margin: 20px 15px;
 }
 #content img
 {
@@ -275,10 +273,10 @@ header
 #content h2
 {
 	margin-top: 10px;
-    font-family: "aero";
-    font-size: 25px;
-    color: #0a1a44;
-    letter-spacing: 2px;
+	font-family: "aero";
+	font-size: 25px;
+	color: #0a1a44;
+	letter-spacing: 2px;
 }
 #homeText
 {
@@ -293,9 +291,11 @@ header
 }
 #stock table
 {
-    width: 60%;
-    margin-top: auto;
-    margin-bottom: auto;
+	width: 100%;
+	margin-top: auto;
+	margin-bottom: auto;
+	border: 2px #0a183a solid;
+	border-radius: 5px;
 }
 #stock tbody
 {
@@ -304,47 +304,76 @@ header
 }
 #stock tr
 {
-	margin-left:20%;
-    margin-top: auto;
-    margin-bottom: auto;
-    color:#0a1a44;
-    width:80px;
+	margin-top: auto;
+	margin-bottom: auto;
+	color:#0a1a44;
+	width:100%;
+	border-bottom: 2px solid black;
+}
+#stock th
+{
+	width:300px;
+}
+#stock td
+{
+	width:350px;
 }
 #stock form input
 {
-	margin-left: 30px;
-    border-radius: 10px;
-    border-width:1px;
-    min-width: 60px;
-    max-width: 100px;
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    height: 90%;
+	border-radius: 10px;
+	border-width:1px;
+	max-width: 100px;
+	text-align: center;
+	margin-top: auto;
+	margin-bottom: auto;
+	height: 90%;
+	width:30%;
 }
 #stock form #submit{
 	color:white;
-	width:150px;
+	width: 33%;
+	max-width: 120px;
 }
 #stock form
 {
 	color:inherit;
-	margin-left:8%;
-    height: 70px;
-    margin-top: auto;
-    margin-bottom: auto;
+	height: 70px;
+	margin-top: auto;
+	margin-bottom: auto;
+	width:100%;
 }
+#searchBar
+{
+	width: 350px;
+	height: 37px;
+	position: absolute;
+	top: 187px;
+	right: 0;
+}
+#searchForm input
+{
+	border: 2px solid #0b0b58;
+	border-radius: 6px;
+	width: 250px;
+	height: 30px;
 
+}
+#searchForm button
+{
+	border-radius: 6px;
+	width: 55px;
+	height: 34px;
+}
 /***** content section end *****/
 /*--------------------------------------------------------------------------------------*/
 /***** Footer start *****/
 
 footer{
 	position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(31, 39, 99, 0.25);;
-    height: 80px;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(31, 39, 99, 0.25);;
+	height: 80px;
 }
 footer img
 {
@@ -367,32 +396,32 @@ footer img
 footer h4
 {
 	color: #aaaaaa;
-    text-transform: uppercase;
-    position: fixed;
-    left: 30px;
-    bottom: 31px;
-    font-size: 18px;
-    letter-spacing: 1.25px;
-    font-family: "aero";
+	text-transform: uppercase;
+	position: fixed;
+	left: 30px;
+	bottom: 31px;
+	font-size: 18px;
+	letter-spacing: 1.25px;
+	font-family: "aero";
 }
 footer h3
 {
 	color: #777777;
-    text-transform: uppercase;
-    position: fixed;
-    right: 20px;
-    bottom: 31px;
-    font-size: 12px;
-    letter-spacing: -1px;
+	text-transform: uppercase;
+	position: fixed;
+	right: 20px;
+	bottom: 31px;
+	font-size: 12px;
+	letter-spacing: -1px;
 }
 /***** Footer end *****/
 /*--------------------------------------------------------------------------------------*/
 /***********************************		TO-DO LIST*/
-	
+
 #stockText
 {
 	font-family: walkwayBlack;
-  	font-size: 50px;
-  	letter-spacing:4px;
-  	margin-top:35px;
+	font-size: 50px;
+	letter-spacing:4px;
+	margin-top:35px;
 }
