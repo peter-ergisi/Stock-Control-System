@@ -1,27 +1,16 @@
-<?php include("includes/header.php") ?>
-<div id="homeText"> <h1>Products!</h1></div>
+<?php
 
-<div id="content" class="contentPre">
-	
-	<div id="stock">
-		<table>
-		  <tr>
-		    <th>Product name</th>
-		  </tr>
-		  <tr>
-		    <td>image</td>
-		  </tr>
-		  <tr>
-		    <th>price</th>
-		  </tr>
-		  </table>
-			<form>
-				<input id="itemQTY" type="text" placeholder="Quantity" required>
-				<input id="submit" type="submit" value="Add to cart!">
-			</form>
-		
-	</div>
-	
-</div>
+session_start();
 
-<?php include("includes/footer.php") ?>
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === 0){
+    header("location: cart.php");
+    exit;
+} else if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === 1){
+    header("location: dashboard.php");
+    exit;
+
+} else {
+    header("location: login.php");
+    exit;
+}
+?>
