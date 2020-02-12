@@ -1,0 +1,398 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans|);
+@font-face
+{
+	font-family: walkwayBlack;
+    src: url("../styles/Walkway_Black.ttf");
+}
+@font-face
+{
+	font-family: aero;
+    src: url("../styles/Aero.ttf");
+}
+*
+{
+	margin:0px;
+	padding:0px;
+}
+body
+{
+	background:url("../images/background.png");
+	background-color:#ffffff;
+}
+
+/*--------------------------------------------------------------------------------------*/
+/***** Navbar section start *****/
+
+@media only screen and (min-width: 1200px)
+{
+	#menuBtn, #menuTxt, #mobileMenu
+	{
+		display:none !important;
+	}
+	.menu
+	{
+		display:block !important;
+	}
+	footer h3
+	{
+		font-size:16px !important;
+	}
+}
+@media only screen and (max-width:450px)
+{
+	#menuTxt
+	{
+		display:none !important;
+	}
+	footer img
+	{
+		display:none !important;
+	}
+}
+@media only screen and (max-width:600px)
+{
+	footer h4
+	{
+		display:none !important;
+	}
+	footer img
+	{
+		margin-left:-150px;
+	}
+}
+header
+{
+	position:fixed;
+	top:0;
+	left: 0;
+    right: 0;
+    width: 100%;
+}
+.navbarPre
+{
+	padding: 6px 0 6px 0;
+    background-color: rgba(10, 18, 119, 0.1);
+    width: 100%;
+    opacity:0;
+    transition: opacity 1s ease-out;
+    border-bottom:#172f6d 2px solid;
+}
+.navbarPostMain
+{
+	padding: 6px 0 6px 0;
+    background-color: rgba(10, 18, 119, 0.1);
+    width: 100%;
+    opacity:1;
+    transition: opacity 2s ease-out;
+    border-bottom:#172f6d 2px solid;
+    height:86px;
+}
+.navbarPost
+{
+	padding: 6px 0 6px 0;
+    background-color: rgba(10, 18, 119, 0.1);
+    width: 100%;
+    opacity:1;
+    transition: opacity 2s ease-out;
+    border-bottom:#172f6d 2px solid;
+    height:86px;
+}
+.logo
+{
+	width:auto;
+	margin-left:20px;
+	float:left;
+	position:fixed;
+	user-select: none;
+}
+.menu{
+	display:none;
+	float:left;
+	margin-top:30px;
+	width:100%;
+	text-align:center;
+	user-select: none;
+}
+.menu li
+{
+	display: inline-block;
+	margin-left:125px;
+}
+.menu a
+{
+	font-family:"walkwayBlack";
+	color:#0a1a44;
+	font-size:25px;
+	text-decoration:none;
+	text-transform:uppercase;
+	letter-spacing:5px;
+	transition:text-shadow 0.25s ease;
+	margin-left:35px;
+	font-weight:bold;
+}
+.menu a:hover
+{
+	text-shadow:0 0 5px black;
+}
+
+/* Mobile screen navbar - <1200px */
+#menuTxt
+{
+	display:block;
+	position:absolute;
+	top: 36px;
+    right: 70px;
+	font-family:"walkwayBlack";
+	color:#0a1a44;
+	font-size:25px;
+	text-decoration:none;
+	text-transform:uppercase;
+	cursor:pointer;
+	letter-spacing:5px;
+	user-select: none;
+}
+#menuBtn
+{
+	cursor:pointer;
+	display:block;
+	position: absolute;
+    top: 34px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+}
+#menuBtn div
+{
+	display: block;
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    background: #000000;
+    border-radius: 10px;
+  	transition: .25s ease-in-out;
+  	left:0;
+}
+#menuBtn div:nth-child(1)
+{
+	top:0px;
+}
+#menuBtn div:nth-child(2),#menuBtn div:nth-child(3)
+{
+	top:12px;
+}
+#menuBtn div:nth-child(4)
+{
+	top:24px;
+}
+#menuBtn.openMenu div:nth-child(2)
+{
+  transform: rotate(45deg);
+}
+#menuBtn.openMenu div:nth-child(3)
+{
+  transform: rotate(-45deg);
+}
+#menuBtn.openMenu div:nth-child(1),#menuBtn.openMenu div:nth-child(4)
+{
+	top:12px;
+	width:0%;
+	left:50%;
+}
+#mobileMenu
+{
+	display:block;
+	height: 0%;
+	width: 100%;
+	position:fixed;
+	top:96px;
+	left:0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    transition:0.75s;
+    overflow-y:hidden;
+    z-index: 1;
+}
+#mobileLinks
+{
+	position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    user-select: none;
+}
+#mobileLinks a {
+	font-family:"walkwayBlack";
+    padding: 15px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #0a1a44;
+    display: block;
+    transition: 0.3s;
+    text-transform:uppercase;
+    letter-spacing:5px;
+}
+#mobileLinks a:hover
+{
+	text-shadow:0 0 4px #666666;
+}
+
+/***** Navbar section end *****/
+/*--------------------------------------------------------------------------------------*/
+/***** content section start *****/
+.contentPre
+{
+	text-align:center;
+	width:100%;
+	height:400px;
+	background: orange;
+	margin-top:15px;
+    opacity:0;
+    transition: opacity 2s ease-out;
+}
+.contentPost
+{
+	text-align:center;
+	width:100%;
+	height:400px;
+	margin-top:15px;
+    opacity:1;
+    transition: opacity 2s ease-out;
+}
+#content div
+{
+	width:95%;
+	background:#ffffff;
+	height:60px;
+    margin: 20px 15px;
+    border:1px solid #818181;
+    border-radius:12px;
+}
+#content img
+{
+	height:230px;
+	margin-top:30px;
+}
+#content h2
+{
+	margin-top: 10px;
+    font-family: "aero";
+    font-size: 25px;
+    color: #0a1a44;
+    letter-spacing: 2px;
+}
+#homeText
+{
+	margin-top:150px;
+	text-align: center;
+	color:#0a1a44;
+	text-decoration:underline;
+}
+#stock
+{
+	display:inline-flex;
+}
+#stock table
+{
+    width: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#stock tbody
+{
+	display:inline-flex;
+	width:100%;
+}
+#stock tr
+{
+	margin-left:20%;
+    margin-top: auto;
+    margin-bottom: auto;
+    color:#0a1a44;
+    width:80px;
+}
+#stock form input
+{
+	margin-left: 30px;
+    border-radius: 10px;
+    border-width:1px;
+    min-width: 60px;
+    max-width: 100px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 90%;
+}
+#stock form #submit{
+	color:white;
+	width:150px;
+}
+#stock form
+{
+	color:inherit;
+	margin-left:8%;
+    height: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/***** content section end *****/
+/*--------------------------------------------------------------------------------------*/
+/***** Footer start *****/
+
+footer{
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(31, 39, 99, 0.25);;
+    height: 80px;
+}
+footer img
+{
+	height:40px;
+	position:fixed;
+	bottom:20px;
+}
+#imgFacebook
+{
+	left:150px;
+}
+#imgTwitter
+{
+	left:195px;
+}
+#imgInstagram
+{
+	left:240px;
+}
+footer h4
+{
+	color: #aaaaaa;
+    text-transform: uppercase;
+    position: fixed;
+    left: 30px;
+    bottom: 31px;
+    font-size: 18px;
+    letter-spacing: 1.25px;
+    font-family: "aero";
+}
+footer h3
+{
+	color: #777777;
+    text-transform: uppercase;
+    position: fixed;
+    right: 20px;
+    bottom: 31px;
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+/***** Footer end *****/
+/*--------------------------------------------------------------------------------------*/
+/***********************************		TO-DO LIST*/
+	
+#stockText
+{
+	font-family: walkwayBlack;
+  	font-size: 50px;
+  	letter-spacing:4px;
+  	margin-top:35px;
+}
