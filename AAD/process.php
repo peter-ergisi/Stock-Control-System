@@ -13,21 +13,20 @@ if($page=='view'){
         </tr>
         <?php
     }
-} else {
-    // Basic example of PHP script to handle with jQuery-Tabledit plug-in.
 
-    header('Content-Type: application/json');
-
-    $input = filter_input_array(INPUT_POST);
-
-    if ($input['action'] == 'edit') {
-        $link->query("UPDATE users SET username='" . $input['username'] . "', email='" . $input['email'] . "', avatar='" . $input['avatar'] . "' WHERE id='" . $input['id'] . "'");
-    } else if ($input['action'] == 'delete') {
-        $link->query("UPDATE users SET deleted=1 WHERE id='" . $input['id'] . "'");
-    } else if ($input['action'] == 'restore') {
-        $link->query("UPDATE users SET deleted=0 WHERE id='" . $input['id'] . "'");
+}  else if($page=='products'){
+    $result = $link->query("SELECT * FROM products");
+    while($row = $result->fetch_assoc()){
+        ?>
+        <tr role="row">
+            <td><?php echo $row['product_ID'] ?></td>
+            <td><?php echo $row['product_Name'] ?></td>
+            <td><?php echo $row['product_Price'] ?></td>
+            <td><?php echo $row['category_ID'] ?></td>
+            <td><?php echo $row['Quantity'] ?></td>
+        </tr>
+        <?php
     }
-
 }
 mysqli_close($link);
 

@@ -48,6 +48,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     url: 'process.php?p=view',
                     method: 'GET'
                 }).done(function(data){
+                    alert(data)
                     $('tbody').html(data)
                     tableData()
                 })
