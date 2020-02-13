@@ -1,7 +1,7 @@
 #cartText
 {
-    margin-top: 150px;
-    text-align:center;
+	margin-top: 150px;
+	text-align:center;
 }
 #cartSection
 {
@@ -15,16 +15,16 @@
 }
 #cartTable
 {
-    width:100%;
+	width:100%;
 }
 #cartBody
 {
-    display:inline-flex;
-    width:100%;
+	display:inline-flex;
+	width:100%;
 }
 #cartBody tr
 {
-    width:100%;
+	width:100%;
 }
 #cartBody th, td
 {
@@ -33,7 +33,7 @@
 }
 #deleteImg
 {
-    height: 50px;
+	height: 50px;
 }
 #totalPriceText
 {
@@ -44,5 +44,9 @@
 }
 #totalPriceText h2
 {
-    float:right;
+	float:right;
 }
+
+
+
+

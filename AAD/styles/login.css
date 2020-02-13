@@ -1,19 +1,12 @@
 #stockform
 {
-	margin:125px auto;
+	margin:190px auto;
 	width:35%;
 	border:solid 4px #172f6d ;
 	border-radius:10px;
 	background:rgba(255, 255, 255, 0.3);;
 	text-align:center;
 	min-width:300px;
-}
-#stockText
-{
-	font-family: walkwayBlack;
-  	font-size: 50px;
-  	letter-spacing:4px;
-  	margin-top:35px;
 }
 #form 
 {
@@ -60,7 +53,7 @@
  	font-size: 16px;
  	font-weight:bold;
  	width: 75px;
- 	height: 30px;
+ 	height: 40px;
   	margin: 2px auto;
   	background: #112b44;
   	outline: none;

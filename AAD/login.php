@@ -6,7 +6,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     if($_SESSION["isStaff"] === 0){
         header("location: cart.php");
     } else if ($_SESSION["isStaff"] === 1)
-        header("location: dashboard.php");
+        header("location: admin.php");
     exit;
 }
 
@@ -42,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;
                             $_SESSION["isStaff"] = 1;
 
-                            header("location: dashboard.php");
+                            header("location: admin.php");
 
                         } else if($isStaff === 0){
                             session_start();
@@ -70,17 +70,17 @@ mysqli_close($link);
 <?php include("includes/header.php") ?>
 
 <div id="stockform">
-	
-	<h1 id="stockText">Login</h1>
-	<form id="form" class="topBefore" action = "<?php echo $_SERVER['PHP_SELF']; ?>" method="post">>
-	
-	  <input id="email" name="email" type="text" placeholder="Email Address" required>
-	  <input id="password" name="password" type="password" placeholder="Password" required>
-	  <input id="submit" type="submit" value="GO!">
-	  <a href="register.php" id="registerText">Register here!</a>
-      
-      
-	</form>
-</div>
+
+    <h1 id="stockText">Login</h1>
+    <form id="form" class="topBefore" action = "<?php echo $_SERVER['PHP_SELF']; ?>" method="post">>
+
+        <input id="email" name="email" type="text" placeholder="Email Address" required>
+        <input id="password" name="password" type="password" placeholder="Password" required>
+        <input id="submit" type="submit" value="GO!">
+        <a href="register.php" id="registerText">Register here!</a>
+
+
+    </form>
+    </div>
 			
 <?php include("includes/footer.php") ?>

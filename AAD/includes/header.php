@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link rel="stylesheet" href="styles/main.css">
 		<link rel="stylesheet" href="styles/login.css">
 		<script type="text/javascript" src="JS/main.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<meta charset="utf-8">
 		<meta name="author" content="Mathew Cutler">
 		<title>Store system</title>
@@ -17,14 +17,14 @@
 					
 					<!-- Logo top right -->
 					<div class="logo">
-						<a href="index.html" style="text-decoration: none"><h1 id="stockText" style="font-size: 30px; color:#0a1a44">Store System</h1></a>
+						<a href="index.php" style="text-decoration: none"><h1 id="stockText">Store System</h1></a>
 					</div>
 					
 					<!-- Navbar - >1200px screens -->
 					<ul class="menu">
 							<a href="index.php">Home</a>
-							<a href="login.php">Login</a>
 							<a href="cart.php">Cart</a>
+							<a href="login.php">Login</a>
 					</ul>
 					
 					<!-- Menu button - shows at <1200px screens -->
@@ -39,8 +39,17 @@
 					<div id="mobileMenu">
 						<div id="mobileLinks">
 							<a href="index.php">Home</a>
-							<a href="login.php">Login</a>
 							<a href="cart.php">Cart</a>
+							<a href="login.php">Login</a>
+						</div>
+					</div>
+					
+					<div class="dropdownNav">
+						<p id="settingsTxt">Settings</p>
+						<i id="settingsCog" class="fa fa-gear"></i>
+						<div class="dropdown-content">
+							<a href="settings.php">User Settings</a>
+							<a href="admin.php">Admin Panel</a>
 						</div>
 					</div>
 					

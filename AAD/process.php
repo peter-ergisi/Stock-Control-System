@@ -28,8 +28,8 @@ if($page=='view'){
         $link->query("UPDATE users SET deleted=0 WHERE id='" . $input['id'] . "'");
     }
 
-    mysqli_close($mysqli);
-
-    echo json_encode($input);
 }
+mysqli_close($link);
+
+echo json_encode($input);
 ?>
