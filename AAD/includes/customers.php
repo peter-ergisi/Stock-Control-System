@@ -1,3 +1,9 @@
+<?php
+$connect = mysqli_connect("localhost", "root", "zwofverOPZi21ME", "storedb");
+$query = "SELECT * FROM users ORDER BY user_ID ASC";
+$result = mysqli_query($connect, $query);
+?>
+
 <div id class="col-lg-12">
 	<div class="panel panel-default">
 		<div class="panel-heading panelBG">
@@ -25,18 +31,25 @@
 										<th rowspan="1"> </th>
 									</tr>
 								</thead>
-								<tbody>
-									<tr role="row">
-										<td rowspan="1">ID</td>
-										<td rowspan="1">Username</td>
-										<td rowspan="1">Full Name</td>
-										<td rowspan="1">Charge Code</td>
-										<td rowspan="1">Admin Access</td>
-										<td rowspan="1"><button class="btn btn-success">View</button></th>
-										<td rowspan="1"><button class="btn btn-warning">Update</button></th>
-										<td rowspan="1"><button class="btn btn-danger">Delete</button></th>
-									</tr>
-								</tbody>
+                                <tbody>
+                                <?php
+                                while($row = mysqli_fetch_array($result))
+                                {
+                                    echo '
+                                      <tr>
+                                       <td>'.$row["user_ID"].'</td>
+                                       <td>'.$row["username"].'</td>
+                                       <td>'.$row["firstName"].'</td>
+                                       <td>'.$row["chargeCode"].'</td>
+                                       <td>'.$row["isStaff"].'</td>
+                                       <td rowspan="1"><button class="btn btn-success">View</button></th>
+									   <td rowspan="1"><button class="btn btn-warning">Update</button></th>
+									   <td rowspan="1"><button class="btn btn-danger">Delete</button></th>
+                                      </tr>
+                                      ';
+                                }
+                                ?>
+                                </tbody>
 							</table>
 						</div>
 					</div>

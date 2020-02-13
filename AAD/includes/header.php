@@ -3,8 +3,12 @@
 	<head>
 		<link rel="stylesheet" href="styles/main.css">
 		<link rel="stylesheet" href="styles/login.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 		<script type="text/javascript" src="JS/main.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/jquery.tabledit.min.js"></script>
 		<meta charset="utf-8">
 		<meta name="author" content="Mathew Cutler">
 		<title>Store system</title>

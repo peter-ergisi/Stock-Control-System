@@ -1,3 +1,9 @@
+<?php
+$connect = mysqli_connect("localhost", "root", "zwofverOPZi21ME", "storedb");
+$query = "SELECT * FROM orders";
+$result = mysqli_query($connect, $query);
+?>
+
 <div id class="col-lg-12">
 	<div class="panel panel-default">
 		<div class="panel-heading panelBG">
@@ -17,7 +23,6 @@
 									<tr role="row">
 										<th rowspan="1">ID</th>
 										<th rowspan="1">Buyer</th>
-										<th rowspan="1">Products</th>
 										<th rowspan="1">Order Date</th>
 										<th rowspan="1">Order Total</th>
 										<th rowspan="1"> </th>
@@ -25,18 +30,24 @@
 										<th rowspan="1"> </th>
 									</tr>
 								</thead>
-								<tbody>
-									<tr role="row">
-										<td rowspan="1">ID</td>
-										<td rowspan="1">Buyer</td>
-										<td rowspan="1">Products</td>
-										<td rowspan="1">Order Date</td>
-										<td rowspan="1">Order Total</td>
-										<td rowspan="1"><button class="btn btn-success">View</button></th>
-										<td rowspan="1"><button class="btn btn-warning">Update</button></th>
-										<td rowspan="1"><button class="btn btn-danger">Delete</button></th>
-									</tr>
-								</tbody>
+                                <tbody>
+                                <?php
+                                while($row = mysqli_fetch_array($result))
+                                {
+                                    echo '
+                                      <tr>
+                                       <td>'.$row["order_ID"].'</td>
+                                       <td>'.$row["user_ID"].'</td>
+                                       <td>'.$row["order_Date"].'</td>
+                                       <td>'.$row["order_Total"].'</td>
+                                       <td rowspan="1"><button class="btn btn-success">View</button></th>
+									   <td rowspan="1"><button class="btn btn-warning">Update</button></th>
+									   <td rowspan="1"><button class="btn btn-danger">Delete</button></th>
+                                      </tr>
+                                      ';
+                                }
+                                ?>
+                                </tbody>
 							</table>
 						</div>
 					</div>
