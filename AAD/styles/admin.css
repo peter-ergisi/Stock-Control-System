@@ -1,0 +1,54 @@
+#adminPanel
+{
+    width: 75%;
+    height: 200px;
+    position: fixed;
+    top: 125px;
+	margin-left:20%;
+	min-width:600px;
+	z-index:-1;
+}
+@media only screen and (max-width:600px)
+{
+	#adminPanel
+	{
+		display:none !important;
+	}
+	#sidebar
+	{
+		width:100%;
+		max-width: 100% !important;
+	}
+}
+.tableTitle
+{
+	width:100%;
+	text-align:center;
+}
+.tableTitle h3
+{
+    font-size: 18px;
+    color: #0a1a44;
+    font-weight: bold;
+}
+#tableBody td, thead th
+{
+	text-align:center;
+	vertical-align:middle !important;
+}
+#tableBody button:focus
+{
+	outline:none;
+}
+.panelBG
+{
+    background-color: #e6e7f1 !important;
+    background-image: none !important;
+}
+.dropdownNav
+{
+	display:none !important;
+}
+
+
+

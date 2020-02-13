@@ -18,6 +18,7 @@ body
 {
 	background:url("../images/background.png");
 	background-color:#ffffff;
+	overflow-y:hidden;
 }
 
 /*--------------------------------------------------------------------------------------*/
@@ -133,6 +134,8 @@ header
 .menu a:hover
 {
 	text-shadow:0 0 5px black;
+	text-decoration:none !important;
+	color: #0a1a44 !important;
 }
 
 /* Mobile screen navbar - <1200px */
@@ -204,7 +207,7 @@ header
 	height: 0%;
 	width: 100%;
 	position:fixed;
-	top:96px;
+	top:86px;
 	left:0;
     background-color: rgb(0,0,0);
     background-color:  rgba(2, 2, 23, 0.9);
@@ -257,6 +260,7 @@ header
 	margin-top:25px;
     opacity:1;
     transition: opacity 2s ease-out;
+    z-index:-1;
 }
 #content div
 {
@@ -299,16 +303,24 @@ header
 }
 #stock tbody
 {
-	display:inline-flex;
+	display:grid;
 	width:100%;
 }
 #stock tr
 {
-    margin-top: auto;
+    margin-top: 5px !important;
     margin-bottom: auto;
     color:#0a1a44;
     width:100%;
     border-bottom: 2px solid black;
+}
+#stock tr:last-of-type
+{
+	margin-top: auto;
+    margin-bottom: auto;
+    color:#0a1a44;
+    width:100%;
+    border-bottom:none !important;
 }
 #stock th
 {
@@ -350,13 +362,16 @@ header
     top: 187px;
     right: 0;
 }
+#searchForm
+{
+	z-index: -1;
+}
 #searchForm input
 {
     border: 2px solid #0b0b58;
     border-radius: 6px;
     width: 250px;
     height: 30px;
-
 }
 #searchForm button
 {
@@ -421,7 +436,83 @@ footer h3
 #stockText
 {
 	font-family: walkwayBlack;
-  	font-size: 50px;
   	letter-spacing:4px;
   	margin-top:35px;
+  	font-size: 30px;
+  	color:#0a1a44;
+  	font-weight:bolder;
 }
+.dropdownNav
+{
+    position: fixed;
+    top: 27px;
+    right: 50px;
+    cursor:pointer;
+    width:100px;
+}
+.dropdown-content
+{
+	display: none;
+  	position: absolute;
+  	background-color: rgba(10, 18, 119, 0.1);
+  	width: 150px;
+  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  	z-index: 1;
+  	text-align:center;
+}
+.dropdown-content a 
+{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdownNav:hover .dropdown-content 
+{
+  display: block;
+}
+.dropdown-content a:hover 
+{
+	background-color: #172f6d;
+	color:white;
+}
+#settingsCog
+{
+    font-size: 50px;
+    width:100%;
+    text-align:center;
+}
+#settingsTxt
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-align:center;
+    user-select:none;
+}
+
+@media only screen and (max-width: 1199px)
+{
+	.dropdownNav
+	{
+    	right: 24%;
+	}
+}
+@media only screen and (max-width: 650px)
+{
+	.dropdownNav
+	{
+    	display:none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
