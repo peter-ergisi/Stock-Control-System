@@ -44,7 +44,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 mysqli_close($link);
 ?>
 
-<div id="stockform">
+<div id="newproductform">
 
     <h1 id="stockText">New Product</h1>
     <form id="form" class="topBefore" action = "<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
