@@ -1,5 +1,18 @@
 <?php include("includes/header.php") ?>
 
+<?php
+
+session_start();
+
+$username = $_SESSION["username"];
+$fname = $_SESSION["first_name"];
+$last_name = $_SESSION["last_name"];
+$charge_code = $_SESSION["charge_code"];
+
+
+
+?>
+
     <link rel="stylesheet" href="styles/cart.css">
 	<link rel="stylesheet" href="styles/settings.css">
     <h1 id="cartText">Account settings</h1>
