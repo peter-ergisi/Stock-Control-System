@@ -3,7 +3,7 @@
 session_start();
 require_once "dbconfig.php";
 
-$sql = "SELECT product_Name, product_Price, quantity  FROM products WHERE product_ID = ?";
+$sql = "SELECT product_Name, product_Price, quantity, low_level, order_amount  FROM products WHERE product_ID = ?";
 $productIdstr = $_GET['q'];
 $cart_quant = $_GET['p'];
 $productId = intval( $productIdstr );
@@ -17,9 +17,9 @@ if($stmt = mysqli_prepare($link, $sql)) {
 
         mysqli_stmt_store_result($stmt);
         if (mysqli_stmt_num_rows($stmt) == 1) {
-            mysqli_stmt_bind_result($stmt, $prod_name, $prod_price, $prod_quant);
+            mysqli_stmt_bind_result($stmt, $prod_name, $prod_price, $prod_quant, $low_level, $order_amount);
             mysqli_stmt_fetch($stmt);
-            $newarray = array($prod_name, $prod_price, $cart_quant, $productId, "in stock");
+            $newarray = array($prod_name, $prod_price, $cart_quant, $productId, "in stock", $prod_quant, $low_level, $order_amount);
             $size = sizeof($_SESSION["Cart"]);
             $dup = false;
             for ($row = 0; $row < $size; $row++) {
