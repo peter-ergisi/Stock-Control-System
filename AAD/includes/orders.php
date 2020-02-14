@@ -25,9 +25,6 @@ $result = mysqli_query($connect, $query);
 										<th rowspan="1">Buyer</th>
 										<th rowspan="1">Order Date</th>
 										<th rowspan="1">Order Total</th>
-										<th rowspan="1"> </th>
-										<th rowspan="1"> </th>
-										<th rowspan="1"> </th>
 									</tr>
 								</thead>
                                 <tbody>
@@ -40,9 +37,6 @@ $result = mysqli_query($connect, $query);
                                        <td>'.$row["user_ID"].'</td>
                                        <td>'.$row["order_Date"].'</td>
                                        <td>'.$row["order_Total"].'</td>
-                                       <td rowspan="1"><button class="btn btn-success">View</button></th>
-									   <td rowspan="1"><button class="btn btn-warning">Update</button></th>
-									   <td rowspan="1"><button class="btn btn-danger">Delete</button></th>
                                       </tr>
                                       ';
                                 }
@@ -56,3 +50,33 @@ $result = mysqli_query($connect, $query);
 		</div>
 	</div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="js/jquery.tabledit.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#tableBody').Tabledit({
+            url:'/mainproject/actions/actionorders.php',
+            columns:{
+                identifier:[0, "uid"],
+                editable:[[2, 'order_Date'], [3, 'order_Total']]
+            },
+            restoreButton:false,
+            onSuccess:function(data, textStatus, jqXHR)
+            {
+                console.log(data);
+                if(data.action == 'delete')
+                {
+                    $('#'+data.uid).remove();
+
+                }
+            },
+            onError: function(xhr, status, error) {
+                console.log(xhr.responseText);
+                alert(xhr.responseText);
+            }
+        });
+
+    });
+</script>

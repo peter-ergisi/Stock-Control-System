@@ -1,3 +1,20 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    if($_SESSION["isStaff"] === 0) {
+        header("location: cart.php");
+    } else if($_SESSION["isStaff"] === 1){
+
+    }
+}
+else {
+    header("location: login.php");
+    exit;
+}
+?>
+
 <?php include("includes/header.php") ?>
 <?php include("includes/sidebar.php") ?>
 	<link rel="stylesheet" href="styles/admin.css">

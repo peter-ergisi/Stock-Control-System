@@ -19,7 +19,7 @@ if($input["action"] === 'edit')
  lastName = '".$lastName."',
  chargeCode = '".$chargeCode."',
  isStaff = '".$isStaff."'
- WHERE user_ID = '".$input["user_ID"]."'
+ WHERE user_ID = '".$input["uid"]."'
  ";
 
     mysqli_query($connect, $query);
@@ -29,7 +29,7 @@ if($input["action"] === 'delete')
 {
     $query = "
  DELETE FROM users
- WHERE user_ID = '".$input["user_ID"]."'
+ WHERE user_ID = '".$input["uid"]."'
  ";
     mysqli_query($connect, $query);
 }

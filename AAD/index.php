@@ -1,10 +1,9 @@
 <?php
-
 session_start();
 
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     if($_SESSION["isStaff"] === 0) {
-        header("location: index.php");
+        header("location: cart.php");
     } else if($_SESSION["isStaff"] === 1){
         header("location: admin.php");
     }

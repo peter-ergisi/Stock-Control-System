@@ -16,7 +16,7 @@ if($input["action"] === 'edit')
  SET product_Name = '".$productName."',
  quantity = '".$productQ."',
  product_Price = '".$productP."'
- WHERE product_ID = '".$input["product_ID"]."'
+ WHERE product_ID = '".$input["uid"]."'
  ";
 
     mysqli_query($connect, $query);
@@ -26,7 +26,7 @@ if($input["action"] === 'delete')
 {
     $query = "
  DELETE FROM products
- WHERE product_ID = '".$input["product_ID"]."'
+ WHERE product_ID = '".$input["uid"]."'
  ";
     mysqli_query($connect, $query);
 }

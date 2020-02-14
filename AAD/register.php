@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             header("location: login.php");
         } else {
             echo "Something went wrong. Please try again later.";
-            printf("Error message: %s\n", $link->error);
+            printf(" Error message: %s\n", $link->error);
         }
     }
 

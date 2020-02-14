@@ -61,7 +61,7 @@ $result = mysqli_query($connect, $query);
         $('#tableBody').Tabledit({
             url:'/mainproject/actions/actionproducts.php',
             columns:{
-                identifier:[0, "product_ID"],
+                identifier:[0, "uid"],
                 editable:[[1, 'product_Name'], [2, 'quantity'], [3, 'product_Price'], [4, 'category_ID']]
             },
             restoreButton:false,
@@ -70,7 +70,7 @@ $result = mysqli_query($connect, $query);
                 console.log(data);
                 if(data.action == 'delete')
                 {
-                    $('#'+data.id).remove();
+                    $('#'+data.uid).remove();
 
                 }
             },
