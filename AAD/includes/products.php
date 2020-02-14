@@ -10,6 +10,7 @@ $result = mysqli_query($connect, $query);
 			<div class="row">
 				<div class="tableTitle">
 					<h3 class="panel-title">Products</h3>
+                    <button id="newProductButton" class="btn btn-success btn-xs">New Product</button>
 				</div>
 			</div>
 		</div>
@@ -80,4 +81,27 @@ $result = mysqli_query($connect, $query);
         });
 
     });
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    var trigger;
+    var container;
+    function loadPHP()
+    {
+        var $this = $(this);
+        //get variable name
+        var target = $this.data('target');
+        //loads page into container
+        container.load("newproduct" + '.php');
+        console.log(target);
+    }
+    function loadVar()
+    {
+        //set trigger
+        trigger = $('#newProductButton');
+        //set container
+        container = $('#adminPanel');
+        trigger.on('click',loadPHP);
+    }
+    $(document).ready(loadVar);
 </script>

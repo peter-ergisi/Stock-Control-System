@@ -54,6 +54,7 @@
 						<div class="dropdown-content">
 							<a href="settings.php">User Settings</a>
 							<a href="admin.php">Admin Panel</a>
+                            <a href="logout.php">Logout</a>
 						</div>
 					</div>
 					

@@ -46,10 +46,9 @@
     background-color: #e6e7f1 !important;
     background-image: none !important;
 }
-.dropdownNav
+#newProductButton
 {
-	display:none !important;
+	float:right;
 }
-
 
 
