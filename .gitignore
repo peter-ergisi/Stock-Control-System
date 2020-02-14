@@ -8,3 +8,19 @@ AAD/tabletest\.php
 AAD/tabletest2\.php
 
 AAD/lib/sendgrid/lib/
+
+AAD/lib/sendgrid/vendor/sendgrid/php-http-client/
+
+AAD/lib/sendgrid/vendor/composer/
+
+AAD/lib/sendgrid/
+
+AAD/lib/sendgrid-php/vendor/sendgrid/php-http-client/lib/
+
+AAD/lib/sendgrid-php/vendor/sendgrid/php-http-client/
+
+AAD/lib/sendgrid-php/vendor/composer/
+
+AAD/lib/sendgrid-php/
+
+AAD/lib/
