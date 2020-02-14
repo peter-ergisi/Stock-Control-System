@@ -26,7 +26,7 @@ if($input["action"] === 'delete')
 {
     $query = "
  DELETE FROM products
- WHERE products_ID = '".$input["product_ID"]."'
+ WHERE product_ID = '".$input["product_ID"]."'
  ";
     mysqli_query($connect, $query);
 }

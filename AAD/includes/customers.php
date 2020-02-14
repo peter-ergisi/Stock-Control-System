@@ -23,12 +23,10 @@ $result = mysqli_query($connect, $query);
 									<tr role="row">
 										<th rowspan="1">ID</th>
 										<th rowspan="1">Username</th>
-										<th rowspan="1">Full Name</th>
+										<th rowspan="1">First Name</th>
+                                        <th rowspan="1">Last Name</th>
 										<th rowspan="1">Charge Code</th>
 										<th rowspan="1">Admin Access?</th>
-										<th rowspan="1"> </th>
-										<th rowspan="1"> </th>
-										<th rowspan="1"> </th>
 									</tr>
 								</thead>
                                 <tbody>
@@ -40,11 +38,9 @@ $result = mysqli_query($connect, $query);
                                        <td>'.$row["user_ID"].'</td>
                                        <td>'.$row["username"].'</td>
                                        <td>'.$row["firstName"].'</td>
+                                       <td>'.$row["lastName"].'</td>
                                        <td>'.$row["chargeCode"].'</td>
                                        <td>'.$row["isStaff"].'</td>
-                                       <td rowspan="1"><button class="btn btn-success">View</button></th>
-									   <td rowspan="1"><button class="btn btn-warning">Update</button></th>
-									   <td rowspan="1"><button class="btn btn-danger">Delete</button></th>
                                       </tr>
                                       ';
                                 }
@@ -58,3 +54,32 @@ $result = mysqli_query($connect, $query);
 		</div>
 	</div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="js/jquery.tabledit.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#tableBody').Tabledit({
+            url:'/mainproject/actions/actioncustomers.php',
+            columns:{
+                identifier:[0, "user_ID"],
+                editable:[[1, 'username'], [2, 'firstName'], [3, 'lastName'], [4, 'chargeCode'], [5, 'isStaff']]
+            },
+            restoreButton:false,
+            onSuccess:function(data, textStatus, jqXHR)
+            {
+                console.log(data);
+                if(data.action == 'delete')
+                {
+                    $('#'+data.id).remove();
+
+                }
+            },
+            onError: function(xhr, status, error) {
+                console.log(xhr.responseText);
+            }
+        });
+
+    });
+</script>

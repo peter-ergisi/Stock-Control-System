@@ -1,12 +1,13 @@
 #adminPanel
 {
     width: 75%;
-    height: 200px;
+    height: 720px;
     position: fixed;
     top: 125px;
 	margin-left:20%;
 	min-width:600px;
 	z-index:-1;
+	overflow-y:auto;
 }
 @media only screen and (max-width:600px)
 {
