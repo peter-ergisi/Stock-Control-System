@@ -61,20 +61,18 @@ $result = mysqli_query($connect, $query);
 <script type="text/javascript">
     function loadPHP()
     {
-        $connect = mysqli_connect('localhost', 'root', 'zwofverOPZi21ME', 'storedb');
-        
+        var id = $(this).attr('data-id');
+        console.log(id);
 
-
-        var id = $(this).data('id');
         $.ajax({
-            url: "lookup.php",
+            url: "actions/lookup.php",
             data: id,
             type: "POST",
             cache: false,
             dataType: "json"
         }).done(function(response) {
             if (response) {
-                $("#myModal").modal('show');
+                alert(JSON.stringify(response));
             }
         });
     }
@@ -84,7 +82,14 @@ $result = mysqli_query($connect, $query);
         trigger = $('#tableBody tbody td button');
         //set container
         container = $('#adminPanel');
+
         trigger.on('click',loadPHP);
     }
     $(document).ready(loadVar);
+</script>
+<script>
+    $(".btn").click(function(){
+        var id = this.id;
+        console.log(id);
+    });
 </script>
